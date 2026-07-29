@@ -1,0 +1,87 @@
+:root {
+  --color-primario: #1b4332;
+  --color-texto: #2b2b2b;
+  --color-fondo: #ffffff;
+  --color-tarjeta: #f8f9fa;
+  --color-borde: #e9ecef;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+header p {
+  margin: 6px 0 0 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: var(--color-tarjeta);
+  border-radius: 12px;
+  border: 1px solid var(--color-borde);
+  padding: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  color: var(--color-primario);
+  margin-top: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 20px;
+  padding-bottom: 0;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  color: var(--color-primario);
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}
