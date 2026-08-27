@@ -4,74 +4,439 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECOLUZ - Iluminación Decorativa</title>
+  <title>JimsArt - Iluminación Rústica, Fuentes y Artesanías</title>
 
-
+  <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 
 <body>
 
+  <!-- Encabezado principal -->
   <header>
-    <h1>ECOLUZ</h1>
-    <p>Iluminación Decorativa de Madera Artesanal</p>
+    <img src="logo.png" alt="Logo de JimsArt" class="logo-header">
+    <p class="subtitulo-header">Iluminación Decorativa, Fuentes y Artesanías en Madera y Cemento</p>
+    <p class="eslogan-header">"Lo que tú sueñes, nosotros lo hacemos realidad"</p>
   </header>
 
+  <!-- Contenedor principal -->
   <div class="container">
 
+    <!-- Hero principal -->
+    <section class="tarjeta-lampara">
+      <h2>Arte Rústico con Historia</h2>
+      <p>Transformamos madera recuperada, barro y cemento texturizado en piezas únicas de iluminación, fuentes de
+        cascada y elementos decorativos hechos a mano.</p>
 
-    <section>
-      <h2>¿Cómo surgió la idea?</h2>
-      <p>La idea nació al ver la gran cantidad de madera que se desperdicia y en pandemia, el tiempo libre y las ganas
-        de aportar nuestro granito de
-        arena con mi papá con el reciclaje. Decidimos recolectar y reciclar esa madera para darle una segunda vida,
-        transformándola
-        a mano en lámparas para decoración.</p>
-    </section>
-
-
-    <section>
-      <h2>¿Qué es ECOLUZ?</h2>
-      <p>ECOLUZ es un proyecto de emprendimiento dedicado al diseño y fabricación de lámparas hechas a mano con madera
-        seleccionada.</p>
-      <p>Combinamos técnicas artesanales con conceptos de diseño sostenible para crear piezas únicas.</p>
-    </section>
-
-
-    <section>
-      <h2>¿Para qué sirve nuestro producto?</h2>
-      <p>Nuestras lámparas no solo iluminan, sino que decoran tus espacios preferidos:</p>
-
-      <div class="card">
-        <h3>Ambientes Acogedores</h3>
-        <p>La madera natural con luz cálida crea una atmósfera de relajación, paz y confort.</p>
-      </div>
-
-      <div class="card">
-        <h3>Identidad y Estilo</h3>
-        <p>Cada lámpara tiene una personalidad propia gracias a las vetas de la madera.</p>
-      </div>
-
-      <div class="card">
-        <h3>Sostenibilidad</h3>
-        <p>Ayudamos al planeta usando materiales reciclados y un proceso limpio.</p>
+      <div class="botones-hero">
+        <a href="#galeria-modelos" id="btn-conocer-mas" class="btn-conocer">Explorar nuestros modelos</a>
+        <a href="#detras-de-camaras" class="btn-secundario">Ver el proceso</a>
       </div>
     </section>
 
+    <!-- Banner de Garantía Artesanal -->
+    <section class="seccion-garantia">
+      <div class="grid-garantia">
+        <div class="item-garantia">
+          <span class="icono-garantia">🛡️</span>
+          <h3>100% Hecho a Mano</h3>
+          <p>Fabricación personalizada sin producción masiva; cada detalle se elabora individualmente.</p>
+        </div>
+        <div class="item-garantia">
+          <span class="icono-garantia">⚡</span>
+          <h3>Pruebas de Calidad</h3>
+          <p>Cada motor de agua, circuito eléctrico y sellado impermeable es testeado minuciosamente.</p>
+        </div>
+        <div class="item-garantia">
+          <span class="icono-garantia">🌿</span>
+          <h3>Materiales Nobles</h3>
+          <p>Troncos rescatados tratados y mezclas resistentes de cemento esculpido para larga duración.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Sobre JimsArt e Historia -->
     <section>
-      <h2>Detalles de Fabricación</h2>
-      <p>Cada lámpara pasa por un proceso de lijado y ensamblado manual para garantizar su calidad.</p>
-      <p>Utilizamos iluminación LED para asegurar un bajísimo consumo de energía.</p>
+      <h2>¿Qué es JimsArt?</h2>
+      <p>
+        <strong>JimsArt</strong> es un taller artesanal enfocado en el diseño y fabricación de lámparas rústicas,
+        fuentes de agua en cascada, murales en relieve y maceteros escultóricos. Combinamos técnicas manuales de
+        modelado en cemento con madera seleccionada para ofrecer piezas exclusivas, duraderas y llenas de personalidad.
+      </p>
+
+      <div class="card-destacado">
+        <h3>¿Cómo surgió la idea?</h3>
+        <p>
+          Surgió en la pandemia del 2020. Al pasar mucho tiempo en casa, nació la idea de crear piezas de estilo rústico
+          que no solo fueran llamativas y útiles para iluminar, sino que también aportaran calidez, naturaleza y
+          personalidad a cada espacio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Catálogo con filtro por pestañas -->
+    <section id="galeria-modelos">
+      <h2>Nuestros Modelos Exclusivos</h2>
+      <p>Explora nuestras diferentes líneas artesanales (haz clic en cualquier foto para verla en pantalla completa):
+      </p>
+
+      <!-- Botones de filtro -->
+      <div class="filtros-contenedor">
+        <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+        <button class="btn-filtro" data-filtro="lamparas">Lámparas</button>
+        <button class="btn-filtro" data-filtro="fuentes">Fuentes de Agua</button>
+        <button class="btn-filtro" data-filtro="murales">Murales</button>
+        <button class="btn-filtro" data-filtro="maceteros">Maceteros</button>
+      </div>
+
+      <!-- Grilla de productos terminados -->
+      <div class="galeria-grid">
+
+        <!-- Lámparas -->
+        <div class="card-modelo item-categoria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="lampara1.jpeg" alt="Modelo Tronco Rústico Colgante"
+              onerror="this.onerror=null; this.src='lampara1.jpg';">
+          </div>
+          <h3>Modelo Tronco Colgante con Luz Cálida</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="lampara2.jpeg" alt="Modelo Viga Rústica con Soga"
+              onerror="this.onerror=null; this.src='lampara2.jpg';">
+          </div>
+          <h3>Modelo Viga Rústica con Soga y Vegetación</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="Lámpara de techo oscura.jpeg" alt="Lámpara Colonial Rústica"
+              onerror="this.onerror=null; this.src='Lámpara de techo oscura.jpg';">
+          </div>
+          <h3>Lámpara Colonial con Bombillos Vela</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="Lámpara de mesa con manos verdes.jpeg" alt="Lámpara Escultórica de Mesa"
+              onerror="this.onerror=null; this.src='Lámpara de mesa con manos verdes.jpg';">
+          </div>
+          <h3>Lámpara de Mesa Escultórica</h3>
+        </div>
+
+        <!-- Fuentes de Agua -->
+        <div class="card-modelo item-categoria" data-categoria="fuentes">
+          <div class="contenedor-img">
+            <img src="Cascada de cántaros terminada con flores moradas.jpeg" alt="Cascada de Cántaros en Piedra Rústica"
+              onerror="this.onerror=null; this.src='Cascada de cántaros terminada con flores moradas.jpg';">
+          </div>
+          <h3>Cascada de Cántaros en Piedra Rústica</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="fuentes">
+          <div class="contenedor-img">
+            <img src="Fuente de la Virgen terminada con flores.jpeg" alt="Fuente Temática en Tronco"
+              onerror="this.onerror=null; this.src='Fuente de la Virgen terminada con flores.jpg';">
+          </div>
+          <h3>Fuente Temática en Tronco y Flores</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="fuentes">
+          <div class="contenedor-img">
+            <img src="Cascada escalonada en mesa con flores amarillas.jpeg" alt="Cascada Escalonada de Mesa"
+              onerror="this.onerror=null; this.src='Cascada escalonada en mesa con flores amarillas.jpg';">
+          </div>
+          <h3>Cascada Escalonada de Mesa</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="fuentes">
+          <div class="contenedor-img">
+            <img src="Cascada de cántaros en pared interior.jpeg" alt="Cascada de Cántaros Floral de Interior"
+              onerror="this.onerror=function(){this.onerror=null; this.src='Cascada de cántaros en pared interior.png';}; this.src='Cascada de cántaros en pared interior.jpg';">
+          </div>
+          <h3>Cascada de Cántaros Floral de Interior</h3>
+        </div>
+
+        <!-- Murales -->
+        <div class="card-modelo item-categoria" data-categoria="murales">
+          <div class="contenedor-img">
+            <img src="Mural naranja con árbol de soga y cántaros.jpeg" alt="Mural Cántaros con Árbol de Soga"
+              onerror="this.onerror=null; this.src='Mural naranja con árbol de soga y cántaros.jpg';">
+          </div>
+          <h3>Mural Cántaros con Árbol de Soga</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="murales">
+          <div class="contenedor-img">
+            <img src="Mural rojo con árbol de alambre y flores.jpeg" alt="Mural Bonsái y Cántaros"
+              onerror="this.onerror=null; this.src='Mural rojo con árbol de alambre y flores.jpg';">
+          </div>
+          <h3>Mural Bonsái y Cántaros de Pared</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="murales">
+          <div class="contenedor-img">
+            <img src="Cuadro vitrina decorativo con marco negro.jpeg" alt="Cuadro Mural Decorativo"
+              onerror="this.onerror=null; this.src='Cuadro vitrina decorativo con marco negro.jpg';">
+          </div>
+          <h3>Cuadro Mural Decorativo con Marco</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="murales">
+          <div class="contenedor-img">
+            <img src="Cascada de platos de barro en base gris.jpeg" alt="Mural Cascada en Piedra y Platos"
+              onerror="this.onerror=null; this.src='Cascada de platos de barro en base gris.jpg';">
+          </div>
+          <h3>Cascada Escalonada de Platos Rústicos</h3>
+        </div>
+
+        <!-- Maceteros -->
+        <div class="card-modelo item-categoria" data-categoria="maceteros">
+          <div class="contenedor-img">
+            <img src="Dúo de maceteros dorados con flores.jpeg" alt="Dúo de Maceteros Esferas Doradas"
+              onerror="this.onerror=null; this.src='Dúo de maceteros dorados con flores.jpg';">
+          </div>
+          <h3>Dúo de Maceteros Esferas Doradas</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="maceteros">
+          <div class="contenedor-img">
+            <img src="Macetero esfera dorada individual.jpeg" alt="Centro Floral en Soporte"
+              onerror="this.onerror=null; this.src='Macetero esfera dorada individual.jpg';">
+          </div>
+          <h3>Centro Floral en Soporte Escultórico</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="maceteros">
+          <div class="contenedor-img">
+            <img src="Macetero geométrico verde con mariquitas.jpeg" alt="Macetero Geométrico Verde"
+              onerror="this.onerror=null; this.src='Macetero geométrico verde con mariquitas.jpg';">
+          </div>
+          <h3>Macetero Geométrico Escalonado</h3>
+        </div>
+
+        <div class="card-modelo item-categoria" data-categoria="maceteros">
+          <div class="contenedor-img">
+            <img src="Macetero esfera plateada con soporte.jpeg" alt="Macetero Esfera Plateada con Base"
+              onerror="this.onerror=function(){this.onerror=null; this.src='Macetero esfera plateada con soporte.png';}; this.src='Macetero esfera plateada con soporte.jpg';">
+          </div>
+          <h3>Macetero Esfera Plateada con Base</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección Detrás de Cámaras -->
+    <section id="detras-de-camaras" class="seccion-proceso">
+      <h2>El Proceso También es Arte</h2>
+      <p class="frase-proceso">
+        <em>"Detrás de cada pieza terminada hay horas de moldeado en cemento, texturizado a mano y pruebas de caída de
+          agua. Cada obra comienza desde cero."</em>
+      </p>
+
+      <div class="grid-proceso">
+
+        <div class="card-proceso">
+          <div class="contenedor-img-proceso">
+            <img src="Cascada de cántaros en proceso con cemento gris.jpeg" alt="Modelado de cascada en cemento"
+              onerror="this.onerror=null; this.src='Cascada de cántaros en proceso con cemento gris.jpg';">
+          </div>
+          <span class="tag-proceso">Ingeniería de Caudal</span>
+          <h4>Canales y circuitos de agua</h4>
+        </div>
+
+        <div class="card-proceso">
+          <div class="contenedor-img-proceso">
+            <img src="Estructura en cemento gris de la Virgen.jpeg" alt="Texturizado en crudo de tronco"
+              onerror="this.onerror=null; this.src='Estructura en cemento gris de la Virgen.jpg';">
+          </div>
+          <span class="tag-proceso">Escultura & Texturas</span>
+          <h4>Tallado de textura de corteza</h4>
+        </div>
+
+        <div class="card-proceso">
+          <div class="contenedor-img-proceso">
+            <img src="Mural con cántaros en pared blanca.jpeg" alt="Fijación en bastidor"
+              onerror="this.onerror=null; this.src='Mural con cántaros en pared blanca.jpg';">
+          </div>
+          <span class="tag-proceso">Ensamble & Relieve</span>
+          <h4>Montaje de vasijas en bastidor</h4>
+        </div>
+
+        <div class="card-proceso">
+          <div class="contenedor-img-proceso">
+            <img src="Mural bastidor blanco con cántaros sin pintar.jpeg" alt="Pruebas de recorrido"
+              onerror="this.onerror=null; this.src='Mural bastidor blanco con cántaros sin pintar.jpg';">
+          </div>
+          <span class="tag-proceso">Calibración Manual</span>
+          <h4>Nivelación del recorrido de caída</h4>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección ¿Cómo Trabajamos? (Guía de pedido) -->
+    <section class="seccion-como-trabajamos">
+      <h2>¿Cómo Trabajamos?</h2>
+      <p>Hacer realidad tu pieza personalizada es un proceso sencillo y transparente:</p>
+
+      <div class="grid-pasos-trabajo">
+        <div class="card-paso">
+          <div class="numero-paso">01</div>
+          <h3>Comparte tu Idea</h3>
+          <p>Cuéntanos qué modelo te gustaría, qué espacio deseas ambientar o las medidas aproximadas que necesitas.</p>
+        </div>
+
+        <div class="card-paso">
+          <div class="numero-paso">02</div>
+          <h3>Cotización & Diseño</h3>
+          <p>Definimos el tipo de madera, colores, acabado de cemento y detalles especiales para acordar tu cotización.
+          </p>
+        </div>
+
+        <div class="card-paso">
+          <div class="numero-paso">03</div>
+          <h3>Fabricación Artesanal</h3>
+          <p>Seleccionamos los materiales, esculpimos la pieza y realizamos el curado y pruebas de funcionamiento.</p>
+        </div>
+
+        <div class="card-paso">
+          <div class="numero-paso">04</div>
+          <h3>Entrega Final</h3>
+          <p>Coordinamos la entrega de tu obra lista para conectar, ambientar y transformar tu espacio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detalles de Calidad y Fabricación -->
+    <section>
+      <h2>Detalles de Fabricación & Calidad</h2>
+      <p>
+        Cada lámpara, fuente y macetero pasa por un cuidadoso proceso manual de tallado, curado de materiales, sellado
+        impermeable e instalación eléctrica de calidad.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Ambientes Vivos</h3>
+          <p>La combinación de luz cálida, vegetación y el sonido del agua en cascada genera un espacio de calma total.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Identidad Exclusiva</h3>
+          <p>No existen dos piezas iguales. El modelado manual en cemento y madera garantiza que cada obra sea única.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sostenibilidad & Durabilidad</h3>
+          <p>Reutilizamos madera y aplicamos materiales resistentes para que cada diseño perdure con el tiempo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes (FAQ) -->
+    <section class="seccion-faq">
+      <h2>Preguntas Frecuentes</h2>
+      <p>Resolvemos las dudas más comunes sobre nuestras piezas artesanales:</p>
+
+      <div class="contenedor-faq">
+
+        <div class="item-faq">
+          <button class="pregunta-faq">
+            <span>¿Las fuentes de agua necesitan una instalación especial de tuberías?</span>
+            <span class="icono-faq">+</span>
+          </button>
+          <div class="respuesta-faq">
+            <p>No, ninguna de nuestras fuentes requiere tuberías ni tomas de agua en la pared. Cuentan con un sistema de
+              circuito cerrado mediante una bomba sumergible silenciosa que recircula el agua constantemente. Solo
+              necesitas llenarla y conectarla a cualquier tomacorriente estándar.</p>
+          </div>
+        </div>
+
+        <div class="item-faq">
+          <button class="pregunta-faq">
+            <span>¿Qué tipo de bombillos utilizan las lámparas?</span>
+            <span class="icono-faq">+</span>
+          </button>
+          <div class="respuesta-faq">
+            <p>Utilizan boquillas y roscas estándar (E27), lo que te permite colocar fácilmente bombillos LED vintage
+              tipo filamento (luz cálida) o el tono de luz que prefieras para tu espacio.</p>
+          </div>
+        </div>
+
+        <div class="item-faq">
+          <button class="pregunta-faq">
+            <span>¿Cuánto tiempo toma elaborar una pieza personalizada?</span>
+            <span class="icono-faq">+</span>
+          </button>
+          <div class="respuesta-faq">
+            <p>El tiempo estimado de elaboración suele ser de <strong>1 a 3 semanas</strong>. Al ser un trabajo 100%
+              artesanal, cada pieza requiere seleccionar el tronco ideal con la forma adecuada, esculpir a mano el
+              cemento, respetar los tiempos de fraguado y secado, y realizar pruebas de impermeabilidad y circuito antes
+              del acabado final.</p>
+          </div>
+        </div>
+
+        <div class="item-faq">
+          <button class="pregunta-faq">
+            <span>¿Hacen entregas o envíos?</span>
+            <span class="icono-faq">+</span>
+          </button>
+          <div class="respuesta-faq">
+            <p>Coordinamos entregas directas en Guayaquil y realizamos envíos seguros y cuidadosamente embalados a nivel
+              nacional para proteger las estructuras de barro, cemento y madera.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sección de Contacto y Pedidos Personalizados -->
+    <section id="contacto" class="seccion-contacto">
+      <h2>¿Tienes una idea en mente?</h2>
+      <p>Diseñamos piezas a la medida de tu espacio, sala, jardín o negocio. Cuéntanos lo que imaginas para cotizarlo y
+        hacerlo realidad.</p>
+
+      <div class="info-contacto">
+        <div class="item-contacto">
+          <strong>📍 Ubicación:</strong> Guayaquil, Ecuador
+        </div>
+        <div class="item-contacto">
+          <strong>🛠️ Modalidad:</strong> Atención, diseño y cotización bajo pedido
+        </div>
+        <div class="item-contacto">
+          <strong>✉️ Correo de Contacto:</strong> <a href="mailto:JimsArt@gmail.com"
+            class="link-correo">JimsArt@gmail.com</a>
+        </div>
+      </div>
     </section>
 
   </div>
+
+  <!-- Modal Lightbox para ampliar imagen -->
+  <div id="modal-imagen" class="modal-lightbox">
+    <span class="cerrar-modal">&times;</span>
+    <img class="imagen-ampliada" id="img01" alt="Vista ampliada">
+    <div id="caption-modal"></div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer-jimsart">
+    <p>© 2026 JimsArt • Guayaquil, Ecuador • Hecho a mano</p>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="js/script.js"></script>
 
 </body>
 
