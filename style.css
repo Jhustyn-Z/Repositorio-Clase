@@ -410,3 +410,69 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Formulario de Contacto  */
+.formulario-contacto {
+  max-width: 580px;
+  margin: 35px auto 0 auto;
+  background-color: #241d17;
+  /* Tono café oscuro acorde al fondo */
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #4a3b2c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f3e9dc;
+  /*  fondo oscuro */
+}
+
+.campo-form input,
+.campo-form textarea {
+  padding: 12px 14px;
+  background-color: #17120e;
+  border: 1px solid #4a3b2c;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  border-color: #d4a373;
+  box-shadow: 0 0 8px rgba(212, 163, 115, 0.3);
+}
+
+.campo-form input::placeholder,
+.campo-form textarea::placeholder {
+  color: #8c7d70;
+}
+
+.btn-enviar-contacto {
+  background-color: #b07d4b;
+  color: #ffffff;
+  border: none;
+  padding: 13px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
