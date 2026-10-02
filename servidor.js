@@ -15,17 +15,17 @@ let productos = [
   { id: 6, nombre: "Mural Decorativo", precio: 35.00, desc: "Arte de pared rústico" }
 ];
 
-// Ruta principal
+// 1. Ruta principal de bienvenida / prueba
 app.get("/", (req, res) => {
   res.send("<h1>Servidor JimsArt en Express funcionando correctamente</h1>");
 });
 
-// Ruta para ver todos los productos
+// 2. Ruta GET - Ver todos los productos
 app.get("/productos", (req, res) => {
   res.json(productos);
 });
 
-// Ruta para buscar un producto por su ID
+// 3. Ruta GET - Buscar un producto por su ID
 app.get("/producto/:id", (req, res) => {
   const idProducto = Number(req.params.id);
   const productoEncontrado = productos.find(p => p.id === idProducto);
@@ -37,7 +37,7 @@ app.get("/producto/:id", (req, res) => {
   return res.status(404).json({ error: "Producto no encontrado" });
 });
 
-// Ruta para agregar un nuevo producto
+// 4. Ruta POST - Agregar un nuevo producto
 app.post("/productos", (req, res) => {
   const nuevoProducto = {
     id: productos.length + 1,
@@ -48,6 +48,39 @@ app.post("/productos", (req, res) => {
 
   productos.push(nuevoProducto);
   return res.status(201).json({ mensaje: "Producto recibido", producto: nuevoProducto });
+});
+
+// 5. Ruta PUT - Actualizar un producto existente por su ID
+app.put("/producto/:id", (req, res) => {
+  const idProducto = Number(req.params.id);
+  const indice = productos.findIndex(p => p.id === idProducto);
+
+  if (indice === -1) {
+    return res.status(404).json({ error: "Producto no encontrado para actualizar" });
+  }
+
+  // Actualizar solo los datos enviados en el body
+  productos[indice] = {
+    ...productos[indice],
+    nombre: req.body.nombre || productos[indice].nombre,
+    precio: req.body.precio !== undefined ? req.body.precio : productos[indice].precio,
+    desc: req.body.desc || productos[indice].desc
+  };
+
+  return res.json({ mensaje: "Producto actualizado con éxito", producto: productos[indice] });
+});
+
+// 6. Ruta DELETE - Eliminar un producto por su ID
+app.delete("/producto/:id", (req, res) => {
+  const idProducto = Number(req.params.id);
+  const indice = productos.findIndex(p => p.id === idProducto);
+
+  if (indice === -1) {
+    return res.status(404).json({ error: "Producto no encontrado para eliminar" });
+  }
+
+  const productoEliminado = productos.splice(indice, 1);
+  return res.json({ mensaje: "Producto eliminado correctamente", producto: productoEliminado[0] });
 });
 
 // Encender el servidor
