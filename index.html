@@ -11,7 +11,7 @@
 
 <body>
 
-  <!-- Encabezado principal -->
+  <!-- // Encabezado principal // -->
   <header>
     <img src="img/logo.png" alt="Logo de JimsArt" class="logo-header">
     <p class="subtitulo-header">Iluminación Decorativa, Fuentes y Artesanías en Madera y Cemento</p>
@@ -20,11 +20,12 @@
 
   <div class="container">
 
-    <!-- Presentacion principal -->
+    <!-- // Presentacion principal // -->
     <section class="tarjeta-lampara">
-      <h2>Arte Rústico con Historia</h2>
-      <p>Transformamos madera recuperada, barro y cemento texturizado en piezas únicas de iluminación, fuentes de
-        cascada y elementos decorativos hechos a mano.</p>
+      <span class="etiqueta-origen">● Hecho a mano en Ecuador</span>
+      <h2>Lo artesanal merece un espacio con identidad</h2>
+      <p>Transformamos madera seleccionada, modelado en cemento y cuerda trenzada en piezas únicas de iluminación,
+        fuentes de cascada y elementos decorativos hechos a mano.</p>
 
       <div class="botones-hero">
         <a href="#catalogo" class="btn-conocer">Explorar nuestros modelos</a>
@@ -32,82 +33,65 @@
       </div>
     </section>
 
-    <!-- Informacion sobre el taller -->
+    <!-- // Informacion sobre el taller // -->
     <section>
       <h2>¿Qué es JimsArt?</h2>
       <p>
-        <strong>JimsArt</strong> es un taller artesanal enfocado en el diseño y fabricación de lámparas rústicas,
-        fuentes de agua en cascada, murales en relieve y maceteros escultóricos. Combinamos técnicas manuales de
-        modelado en cemento con madera seleccionada para ofrecer piezas exclusivas, duraderas y llenas de personalidad.
+        <strong>JimsArt</strong> es un taller artesanal enfocado en el diseño y fabricación de lámparas, fuentes de agua
+        en cascada, murales decorativos, maceteros y piezas ornamentales en madera y cuerda tejida. Combinamos técnicas
+        manuales de modelado con madera seleccionada para ofrecer piezas exclusivas, duraderas y llenas de personalidad.
       </p>
 
       <div class="card-destacado">
         <h3>¿Cómo surgió la idea?</h3>
         <p>
-          Surgió en la pandemia del 2020. Al pasar mucho tiempo en casa, nació la idea de crear piezas de estilo rústico
-          que no solo fueran llamativas y útiles para iluminar, sino que también aportaran calidez, naturaleza y
+          Surgió en la pandemia del 2020. Al pasar mucho tiempo en casa, nació la idea de crear piezas que no solo
+          fueran llamativas y útiles para iluminar o ambientar, sino que también aportaran calidez, naturaleza y
           personalidad a cada espacio.
         </p>
       </div>
     </section>
 
-    <!-- Seccion de catalogo con filtros -->
+    <!-- // Seccion de catalogo con filtros // -->
     <section id="catalogo">
       <h2>Nuestros Modelos Exclusivos</h2>
-      <p>Selecciona una categoría para ver los productos terminados:</p>
+      <p>Selecciona una categoría para ver los productos terminados (haz clic en cualquier foto para verla en grande):
+      </p>
 
       <div class="filtros-contenedor">
-        <button class="btn-filtro activo" onclick="filtrar('todos', this)">Todos</button>
-        <button class="btn-filtro" onclick="filtrar('lamparas', this)">Lámparas</button>
-        <button class="btn-filtro" onclick="filtrar('fuentes', this)">Fuentes</button>
-        <button class="btn-filtro" onclick="filtrar('murales', this)">Murales</button>
-        <button class="btn-filtro" onclick="filtrar('maceteros', this)">Maceteros</button>
+        <button type="button" class="btn-filtro activo" onclick="filtrar('todos', this)">Todos</button>
+        <button type="button" class="btn-filtro" onclick="filtrar('fuentes', this)">Fuentes</button>
+        <button type="button" class="btn-filtro" onclick="filtrar('lamparas', this)">Lámparas</button>
+        <button type="button" class="btn-filtro" onclick="filtrar('artesanias', this)">Bicicletas & Adornos</button>
+        <button type="button" class="btn-filtro" onclick="filtrar('murales', this)">Murales</button>
+        <button type="button" class="btn-filtro" onclick="filtrar('maceteros', this)">Maceteros</button>
       </div>
 
-      <div class="galeria-grid">
-        <!-- Tarjetas de lamparas -->
-        <div class="card-modelo item-galeria" data-categoria="lamparas">
+      <div class="galeria-grid" id="galeriaGrid">
+        <!-- // Fuentes // -->
+        <div class="card-modelo item-galeria" data-categoria="fuentes">
           <div class="contenedor-img">
-            <img src="img/lampara1.jpeg" alt="Modelo Tronco Colgante con Luz Cálida">
+            <img src="img/Cascada de cántaros en pared interior.jpeg" alt="Cascada de Cántaros en Pared Interior">
           </div>
-          <h3>Modelo Tronco Colgante con Luz Cálida</h3>
+          <h3>Cascada de Cántaros en Pared Interior</h3>
+          <p class="desc-card">Circuito de caída continua con platos y cántaros de barro sobre base de relieve.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Relieve</span>
+            <span class="foot-desc">Bomba incluida</span>
+          </div>
         </div>
 
-        <div class="card-modelo item-galeria" data-categoria="lamparas">
-          <div class="contenedor-img">
-            <img src="img/lampara2.jpeg" alt="Modelo Viga Rústica con Soga y Vegetación">
-          </div>
-          <h3>Modelo Viga Rústica con Soga y Vegetación</h3>
-        </div>
-
-        <div class="card-modelo item-galeria" data-categoria="lamparas">
-          <div class="contenedor-img">
-            <img src="img/Lámpara de techo oscura.jpeg" alt="Lámpara Colonial con Bombillos Vela">
-          </div>
-          <h3>Lámpara Colonial con Bombillos Vela</h3>
-        </div>
-
-        <div class="card-modelo item-galeria" data-categoria="lamparas">
-          <div class="contenedor-img">
-            <img src="img/Lámpara de mesa con manos verdes.jpeg" alt="Lámpara de Mesa Escultórica">
-          </div>
-          <h3>Lámpara de Mesa Escultórica</h3>
-        </div>
-
-        <!-- Tarjetas de fuentes -->
         <div class="card-modelo item-galeria" data-categoria="fuentes">
           <div class="contenedor-img">
             <img src="img/Cascada de cántaros terminada con flores moradas.jpeg"
               alt="Cascada de Cántaros en Piedra Rústica">
           </div>
           <h3>Cascada de Cántaros en Piedra Rústica</h3>
-        </div>
-
-        <div class="card-modelo item-galeria" data-categoria="fuentes">
-          <div class="contenedor-img">
-            <img src="img/Fuente de la Virgen terminada con flores.jpeg" alt="Fuente Temática en Tronco y Flores">
+          <p class="desc-card">Estructura esculpida a mano en cemento con acabado tipo roca y flores decorativas.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Sala / Patio</span>
+            <span class="foot-desc">Circuito continuo</span>
           </div>
-          <h3>Fuente Temática en Tronco y Flores</h3>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="fuentes">
@@ -115,21 +99,230 @@
             <img src="img/Cascada escalonada en mesa con flores amarillas.jpeg" alt="Cascada Escalonada de Mesa">
           </div>
           <h3>Cascada Escalonada de Mesa</h3>
+          <p class="desc-card">Diseño compacto de niveles escalonados para mesas de centro, salas o recibidores.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Centro de Mesa</span>
+            <span class="foot-desc">Sonido suave</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="fuentes">
           <div class="contenedor-img">
-            <img src="img/Cascada de cántaros en pared interior.jpeg" alt="Cascada de Cántaros Floral de Interior">
+            <img src="img/Fuente de la Virgen terminada con flores.jpeg" alt="Fuente Temática en Tronco y Flores">
           </div>
-          <h3>Cascada de Cántaros Floral de Interior</h3>
+          <h3>Fuente Temática en Tronco y Flores</h3>
+          <p class="desc-card">Escultura con modelado de corteza natural, imagen central y caída serena de agua.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Temática / Gruta</span>
+            <span class="foot-desc">Diseño exclusivo</span>
+          </div>
         </div>
 
-        <!-- Tarjetas de murales -->
+        <!-- // Lamparas // -->
+        <div class="card-modelo item-galeria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="img/lampara1.jpeg" alt="Modelo Tronco Colgante con Luz Cálida">
+          </div>
+          <h3>Modelo Tronco Colgante con Luz Cálida</h3>
+          <p class="desc-card">Tronco natural curado con bombillos colgantes para comedores y barras.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Techo / Comedor</span>
+            <span class="foot-desc">Rosetas E27</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="img/lampara2.jpeg" alt="Modelo Viga Rústica con Soga y Vegetación">
+          </div>
+          <h3>Modelo Viga Rústica con Soga y Vegetación</h3>
+          <p class="desc-card">Viga de madera suspendida con enrollado de cuerda gruesa y follaje ornamental.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Techo / Rústico</span>
+            <span class="foot-desc">Luz cálida</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="img/Lámpara de techo oscura.jpeg" alt="Lámpara Colonial con Bombillos Vela">
+          </div>
+          <h3>Lámpara Colonial con Bombillos Vela</h3>
+          <p class="desc-card">Estructura entintada con bombillos tipo vela para un ambiente tradicional.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Techo / Clásica</span>
+            <span class="foot-desc">Luz ambiental</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="lamparas">
+          <div class="contenedor-img">
+            <img src="img/Lámpara de mesa con manos verdes.jpeg" alt="Lámpara de Mesa Escultórica">
+          </div>
+          <h3>Lámpara de Mesa Escultórica</h3>
+          <p class="desc-card">Base esculpida en cemento con esfera luminosa para escritorios o mesas de noche.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Escultura</span>
+            <span class="foot-desc">Luz difusa</span>
+          </div>
+        </div>
+
+        <!-- // Artesanias // -->
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-1.jpeg" alt="Bicicleta Clásica con Canasta">
+          </div>
+          <h3>Bicicleta Clásica con Canasta</h3>
+          <p class="desc-card">Bicicleta ornamental tejida con cuerda gruesa y canasta cilíndrica de varitas de madera
+            para flores de centro de mesa.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Sala</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-2.jpeg" alt="Corona Navideña con Campana">
+          </div>
+          <h3>Corona Navideña con Campana</h3>
+          <p class="desc-card">Aro circular envuelto en cuerda natural con ramas de pino nevadas, piñas secas, frutos
+            rojos y campana dorada central.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Navidad</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-3.jpeg" alt="Enrejado Navideño con Corona">
+          </div>
+          <h3>Enrejado Navideño con Corona</h3>
+          <p class="desc-card">Estructura enrejada de varas de madera unidas con nudos de cuerda, decorada con corona
+            navideña y lazos rústicos.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Navidad / Puertas</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-4.jpeg" alt="Enrejado Floral con Luces LED">
+          </div>
+          <h3>Enrejado Floral con Luces LED</h3>
+          <p class="desc-card">Adorno colgante en rombo con arreglo de flores e iluminación nocturna suave a batería
+            para ambientar paredes interiores.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Noche</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-5.jpeg" alt="Enrejado Colgante Floral">
+          </div>
+          <h3>Enrejado Colgante Floral</h3>
+          <p class="desc-card">Estructura de madera tratada con cuerda tensada y canastilla frontal para flores
+            artificiales o naturales secas.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Pasillo</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-6.jpeg" alt="Triciclo Carreta para Flores">
+          </div>
+          <h3>Triciclo Carreta para Flores</h3>
+          <p class="desc-card">Triciclo de madera y cuerda con ruedas de rayos firmes y cajón posterior amplio para
+            colocar macetitas o arreglos florales.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Exteriores</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-7.jpeg" alt="Soporte Colgante de Tres Canastas">
+          </div>
+          <h3>Soporte Colgante de Tres Canastas</h3>
+          <p class="desc-card">Base horizontal de leña natural tratada con tres canastitas tejidas que cuelgan a
+            desnivel con flores.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Colgante</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-8.jpeg" alt="Enrejado Cuadrado Navideño con Luces">
+          </div>
+          <h3>Enrejado Cuadrado Navideño con Luces</h3>
+          <p class="desc-card">Panel en rombo con follaje de pino, detalles festivos e iluminación integrada para colgar
+            en época de diciembre.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Navidad / Luces</span>
+            <span class="foot-desc">Festivo</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-9.jpeg" alt="Triciclo Mediano de Mesa">
+          </div>
+          <h3>Triciclo Mediano de Mesa</h3>
+          <p class="desc-card">Pieza ornamental de mesa con tejido cerrado a mano y canastilla para centro de sala,
+            recibidor o comedor.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Centro de Mesa</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-10.jpeg" alt="Portalápices Artesanal de Mesa">
+          </div>
+          <h3>Portalápices Artesanal de Mesa</h3>
+          <p class="desc-card">Organizador de escritorio ensamblado a pulso en madera con tejido firme para lápices y
+            accesorios.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Escritorio / Oficina</span>
+            <span class="foot-desc">Diseño adaptable</span>
+          </div>
+        </div>
+
+        <div class="card-modelo item-galeria" data-categoria="artesanias">
+          <div class="contenedor-img">
+            <img src="img/Modelo-11.jpeg" alt="Media Luna Navideña con Campanitas">
+          </div>
+          <h3>Media Luna Navideña con Campanitas</h3>
+          <p class="desc-card">Adorno festivo en forma de luna con pino nevado, frutos rojos, lazo azul, cascabeles
+            dorados y figura decorativa de Papá Noel.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Navidad / Pared</span>
+            <span class="foot-desc">Festivo</span>
+          </div>
+        </div>
+
+        <!-- // Murales // -->
         <div class="card-modelo item-galeria" data-categoria="murales">
           <div class="contenedor-img">
             <img src="img/Mural naranja con árbol de soga y cántaros.jpeg" alt="Mural Cántaros con Árbol de Soga">
           </div>
           <h3>Mural Cántaros con Árbol de Soga</h3>
+          <p class="desc-card">Fondo en tonos cálidos con árbol modelado en cuerda y cántaros en relieve sobre bastidor.
+          </p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Relieve</span>
+            <span class="foot-desc">Cuadro artesanal</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="murales">
@@ -137,21 +330,37 @@
             <img src="img/Mural rojo con árbol de alambre y flores.jpeg" alt="Mural Bonsái y Cántaros de Pared">
           </div>
           <h3>Mural Bonsái y Cántaros de Pared</h3>
+          <p class="desc-card">Cuadro en fondo carmesí con estructura de árbol en alambre trenzado y flores decorativas.
+          </p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Escultura</span>
+            <span class="foot-desc">Pieza única</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="murales">
           <div class="contenedor-img">
-            <img src="img/Cuadro vitrina decorativo con marco negro.jpeg" alt="Cuadro Mural Decorativo con Marco">
+            <img src="img/Cuadro vitrina decorativo con marco negro.jpeg" alt="Cuadro Vitrina Decorativo con Marco">
           </div>
-          <h3>Cuadro Mural Decorativo con Marco</h3>
+          <h3>Cuadro Vitrina Decorativo con Marco</h3>
+          <p class="desc-card">Marco profundo con arreglo floral y elementos secos resguardados en vitrina.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Pared / Vitrina</span>
+            <span class="foot-desc">Marco protegido</span>
+          </div>
         </div>
 
-        <!-- Tarjetas de maceteros -->
+        <!-- // Maceteros // -->
         <div class="card-modelo item-galeria" data-categoria="maceteros">
           <div class="contenedor-img">
             <img src="img/Dúo de maceteros dorados con flores.jpeg" alt="Dúo de Maceteros Esferas Doradas">
           </div>
           <h3>Dúo de Maceteros Esferas Doradas</h3>
+          <p class="desc-card">Par de maceteros esféricos texturizados con acabado dorado para centros florales.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Set x2</span>
+            <span class="foot-desc">Cemento moldeado</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="maceteros">
@@ -159,6 +368,11 @@
             <img src="img/Macetero esfera dorada individual.jpeg" alt="Centro Floral en Soporte Escultórico">
           </div>
           <h3>Centro Floral en Soporte Escultórico</h3>
+          <p class="desc-card">Vasija individual en cemento metalizado con base firme para arreglos de mesa.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Centro de Mesa</span>
+            <span class="foot-desc">Modelado a mano</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="maceteros">
@@ -166,6 +380,11 @@
             <img src="img/Macetero geométrico verde con mariquitas.jpeg" alt="Macetero Geométrico Escalonado">
           </div>
           <h3>Macetero Geométrico Escalonado</h3>
+          <p class="desc-card">Cuerpo facetado en cemento pintado a mano para pequeñas plantas o flores vivas.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Repisa</span>
+            <span class="foot-desc">Acabado pulido</span>
+          </div>
         </div>
 
         <div class="card-modelo item-galeria" data-categoria="maceteros">
@@ -173,11 +392,109 @@
             <img src="img/Macetero esfera plateada con soporte.jpeg" alt="Macetero Esfera Plateada con Base">
           </div>
           <h3>Macetero Esfera Plateada con Base</h3>
+          <p class="desc-card">Esfera con acabado plateado sobre peana escultórica para esquinas o estantes.</p>
+          <div class="card-foot">
+            <span class="foot-cat">Mesa / Estante</span>
+            <span class="foot-desc">Base integrada</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Proceso de fabricacion -->
+    <!-- // Espacios y Usos // -->
+    <section class="ocasiones-section" id="ocasiones">
+      <div class="section-title">
+        <span class="sub-badge">Ideas de Ambientación</span>
+        <h2>¿Dónde colocar estas piezas?</h2>
+        <p>Diseños versátiles pensados para resaltar la calidez de cualquier rincón del hogar.</p>
+      </div>
+
+      <div class="ocasiones-grid">
+        <article class="ocasion-card">
+          <div class="ocasion-icon">🪴</div>
+          <h3>Centro de Mesa en Sala o Comedor</h3>
+          <p>Las bicicletas y triciclos portamacetas son ideales como punto focal sobre mesas de madera, consolas de
+            recibidor o estantes abiertos con flores vivas o artificiales.</p>
+        </article>
+
+        <article class="ocasion-card">
+          <div class="ocasion-icon">🖼️</div>
+          <h3>Paredes de Pasillos & Entradas</h3>
+          <p>Los cuadros vitrina, murales con cántaros y celosías de varas aportan textura, relieve y volumen a muros
+            lisos.</p>
+        </article>
+
+        <article class="ocasion-card">
+          <div class="ocasion-icon">✨</div>
+          <h3>Rincones con Luz y Agua</h3>
+          <p>Las fuentes de agua continuas y las lámparas combinan luz ambiental cálida y sonido relajante para salas o
+            terrazas cubiertas.</p>
+        </article>
+
+        <article class="ocasion-card">
+          <div class="ocasion-icon">🎄</div>
+          <h3>Detalles de Época Navideña</h3>
+          <p>Las coronas, medias lunas y enrejados festivos visten puertas principales y pasillos con un aire
+            tradicional y duradero año tras año.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- // Fabricacion y Encargos // -->
+    <section class="fabricacion-section" id="encargos">
+      <div class="fabricacion-box">
+        <div class="fabricacion-text">
+          <span class="sub-badge">Taller Creativo</span>
+          <h2>¿Cómo se trabaja cada encargo?</h2>
+          <p>No trabajamos con líneas masivas. Cada modelo se inicia desde cero cuando lo solicitas, lo que permite
+            realizar adaptaciones concretas:</p>
+          <ul class="fabricacion-list">
+            <li><strong>Elección de flores:</strong> Posibilidad de incluir rosas, girasoles, follaje verde o dejar la
+              canasta vacía para colocar una maceta real.</li>
+            <li><strong>Dimensiones a la medida:</strong> Ajuste de tamaño en los enrejados de pared, lámparas y murales
+              para que cuadren con el espacio exacto de tu pared.</li>
+            <li><strong>Incorporación de luces:</strong> Agregado de micro-LED de luz cálida o multicolor con caja
+              oculta de baterías.</li>
+          </ul>
+        </div>
+
+        <div class="fabricacion-card-right">
+          <h3>¿Quieres encargar o consultar un modelo?</h3>
+          <p>Indícanos el nombre del diseño (ejemplo: <strong>Bicicleta con Canasta</strong>, <strong>Media Luna
+              Navideña</strong> o <strong>Cascada Escalonada</strong>) y describe si requieres algún cambio de tamaño o
+            color para coordinar la fabricación directamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- // Consejos de Conservacion // -->
+    <section class="cuidados-section" id="cuidados">
+      <div class="section-title">
+        <span class="sub-badge">Mantenimiento Sencillo</span>
+        <h2>Consejos de Conservación</h2>
+        <p>Sigue estas recomendaciones básicas para que las piezas mantengan su firmeza y color por mucho tiempo.</p>
+      </div>
+
+      <div class="cuidados-grid">
+        <div class="cuidado-item">
+          <strong>1. Limpieza de Polvo</strong>
+          <p>Usa una brocha seca de cerdas suaves o un plumero para sacudir la cuerda tejida y las ramas sin deformar
+            los nudos.</p>
+        </div>
+        <div class="cuidado-item">
+          <strong>2. Protección de Lluvia</strong>
+          <p>Recomendado para interiores o balcones bajo techo. Evita que la madera y la cuerda reciban agua directa.
+          </p>
+        </div>
+        <div class="cuidado-item">
+          <strong>3. Cambio de Baterías</strong>
+          <p>En los modelos con luces LED, la cajita trasera cuenta con interruptor de fácil apertura para sustituir las
+            pilas cuando se agoten.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- // Proceso de fabricacion // -->
     <section id="detras-de-camaras" class="seccion-proceso">
       <h2>El Proceso También es Arte</h2>
       <p class="frase-proceso">
@@ -213,7 +530,7 @@
 
         <div class="card-proceso">
           <div class="contenedor-img-proceso">
-            <img src="img/Mural con cántaros en pared blanca.jpeg" alt="Fijación en bastidor">
+            <img src="img/Mural con cántaros en pared blanca.jpeg" alt="Montaje de vasijas en bastidor">
           </div>
           <span class="tag-proceso">Ensamble & Relieve</span>
           <h4>Montaje de vasijas en bastidor</h4>
@@ -229,66 +546,7 @@
       </div>
     </section>
 
-    <!-- Pasos de atencion y pedido -->
-    <section class="seccion-como-trabajamos">
-      <h2>¿Cómo Trabajamos?</h2>
-      <p>Hacer realidad tu pieza personalizada es un proceso sencillo y transparente:</p>
-
-      <div class="grid-pasos-trabajo">
-        <div class="card-paso">
-          <div class="numero-paso">01</div>
-          <h3>Comparte tu Idea</h3>
-          <p>Cuéntanos qué modelo te gustaría, qué espacio deseas ambientar o las medidas aproximadas que necesitas.</p>
-        </div>
-
-        <div class="card-paso">
-          <div class="numero-paso">02</div>
-          <h3>Cotización & Diseño</h3>
-          <p>Definimos el tipo de madera, colores, acabado de cemento y detalles especiales para acordar tu cotización.
-          </p>
-        </div>
-
-        <div class="card-paso">
-          <div class="numero-paso">03</div>
-          <h3>Fabricación Artesanal</h3>
-          <p>Seleccionamos los materiales, esculpimos la pieza y realizamos el curado y pruebas de funcionamiento.</p>
-        </div>
-
-        <div class="card-paso">
-          <div class="numero-paso">04</div>
-          <h3>Entrega Final</h3>
-          <p>Coordinamos la entrega de tu obra lista para conectar, ambientar y transformar tu espacio.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seccion de caracteristicas de calidad -->
-    <section>
-      <h2>Detalles de Fabricación & Calidad</h2>
-      <p>Cada lámpara, fuente y macetero pasa por un cuidadoso proceso manual de tallado, curado de materiales, sellado
-        impermeable e instalación eléctrica de calidad.</p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <h3>Ambientes Vivos</h3>
-          <p>La combinación de luz cálida, vegetación y el sonido del agua en cascada genera un espacio de calma total.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Identidad Exclusiva</h3>
-          <p>No existen dos piezas iguales. El modelado manual en cemento y madera garantiza que cada obra sea única.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Sostenibilidad & Durabilidad</h3>
-          <p>Reutilizamos madera y aplicamos materiales resistentes para que cada diseño perdure con el tiempo.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Preguntas frecuentes -->
+    <!-- // Preguntas frecuentes // -->
     <section class="seccion-faq">
       <h2>Preguntas Frecuentes</h2>
 
@@ -310,33 +568,41 @@
         </div>
 
         <div class="item-faq">
+          <div class="pregunta-faq">¿Se pueden pedir bicicletas o adornos con medidas específicas?</div>
+          <div class="respuesta-faq">
+            <p>Sí. Como cada pieza se elabora a pulso en el taller, podemos adaptar el largo, ancho o colores de las
+              flores según la mesa o pared donde vayas a ubicarlo.</p>
+          </div>
+        </div>
+
+        <div class="item-faq">
           <div class="pregunta-faq">¿Cuánto tiempo demora un pedido?</div>
           <div class="respuesta-faq">
-            <p>Al ser un trabajo manual, normalmente toma entre 1 a 2 semanas según el tamaño y los detalles pedidos.
-            </p>
+            <p>Al ser un trabajo manual, normalmente toma entre 3 días a 2 semanas según el tamaño y la complejidad del
+              trabajo.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Informacion de contacto y formulario  -->
+    <!-- // Informacion de contacto y formulario // -->
     <section id="contacto" class="seccion-contacto">
       <h2>¿Tienes una idea en mente?</h2>
-      <p class="descripcion-contacto">Diseñamos piezas a la medida de tu espacio. Escríbenos para cotizar tu lámpara o
-        artesanía.</p>
+      <p class="descripcion-contacto">Diseñamos piezas a la medida de tu espacio. Escríbenos para cotizar tu lámpara,
+        fuente o artesanía.</p>
 
       <div class="info-contacto">
         <div class="item-info">
           <span>📍</span> <strong>Ubicación:</strong> Guayaquil, Ecuador
         </div>
         <div class="item-info">
-          <span>✉️</span> <strong>Correo oficial:</strong> <a href="mailto:jandres200825@gmail.com"
-            class="link-correo">jandres200825@gmail.com</a>
+          <span>✉️</span> <strong>Correo oficial:</strong> <a href="mailto:jeissyjims@yahoo.com"
+            class="link-correo">jeissyjims@yahoo.com</a>
         </div>
       </div>
 
-      <!-- Formulario directo -->
-      <form class="formulario-contacto" action="https://formsubmit.co/jandres200825@gmail.com" method="POST">
+      <!-- // Formulario directo // -->
+      <form class="formulario-contacto" action="https://formsubmit.co/jeissyjims@yahoo.com" method="POST">
         <div class="campo-form">
           <label for="nombre">Tu Nombre:</label>
           <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
@@ -356,3 +622,27 @@
         <button type="submit" class="btn-enviar-contacto">Enviar Mensaje</button>
       </form>
     </section>
+
+  </div>
+
+  <!-- // Control del boton volver arriba // -->
+  <button id="btnVolverArriba" class="btn-arriba" title="Subir al inicio">↑</button>
+
+  <!-- // Modal de Zoom // -->
+  <div id="modalZoom" class="modal-zoom">
+    <span class="cerrar-zoom" id="btnCerrarZoom">&times;</span>
+    <div class="modal-zoom-contenido">
+      <img id="imgZoom" src="" alt="Vista grande">
+      <p id="captionZoom"></p>
+    </div>
+  </div>
+
+  <!-- // Footer // -->
+  <footer class="footer-jimsart">
+    <p>© 2026 JimsArt. Guayaquil, Ecuador.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -7,12 +7,15 @@ app.use(express.json());
 
 // Catálogo base de JimsArt con IDs numéricos
 let productos = [
-  { id: 1, nombre: "Lámpara Rústica", precio: 25.00, desc: "Madera con acabado vintage" },
-  { id: 2, nombre: "Lámpara Colgante", precio: 30.00, desc: "Base de madera y cuerda rústica" },
-  { id: 3, nombre: "Lámpara Geométrica", precio: 22.50, desc: "Diseño moderno en madera tratada" },
-  { id: 4, nombre: "Cascada de Cántaros", precio: 45.00, desc: "Fuente decorativa con bomba de agua" },
-  { id: 5, nombre: "Macetero Geométrico", precio: 15.00, desc: "Macetero de cemento y madera" },
-  { id: 6, nombre: "Mural Decorativo", precio: 35.00, desc: "Arte de pared rústico" }
+  { id: 1, nombre: "Cascada de Cántaros en Pared Interior", categoria: "fuentes", desc: "Circuito de caída continua con platos y cántaros de barro" },
+  { id: 2, nombre: "Cascada Escalonada de Mesa", categoria: "fuentes", desc: "Fuente compacta para centros de mesa o recibidores" },
+  { id: 3, nombre: "Modelo Tronco Colgante con Luz Cálida", categoria: "lamparas", desc: "Tronco natural curado con bombillos colgantes" },
+  { id: 4, nombre: "Modelo Viga Rústica con Soga y Vegetación", categoria: "lamparas", desc: "Viga suspendida con cuerda y follaje decorativo" },
+  { id: 5, nombre: "Modelo #01: Bicicleta con Canasta", categoria: "artesanias", desc: "Bicicleta artesanal con canastilla para flores" },
+  { id: 6, nombre: "Modelo #06: Triciclo Carreta para Flores", categoria: "artesanias", desc: "Triciclo con ruedas de madera y cajón amplio" },
+  { id: 7, nombre: "Modelo #10: Lapicero Artesanal de Escritorio", categoria: "artesanias", desc: "Organizador portalápices en madera y cuerda" },
+  { id: 8, nombre: "Mural Cántaros con Árbol de Soga", categoria: "murales", desc: "Cuadro de pared con árbol de cuerda y vasijas en relieve" },
+  { id: 9, nombre: "Dúo de Maceteros Esferas Doradas", categoria: "maceteros", desc: "Vasijas esféricas en cemento con acabado dorado" }
 ];
 
 // 1. Ruta principal de bienvenida / prueba
@@ -42,7 +45,7 @@ app.post("/productos", (req, res) => {
   const nuevoProducto = {
     id: productos.length + 1,
     nombre: req.body.nombre,
-    precio: req.body.precio || 0,
+    categoria: req.body.categoria || "artesanias",
     desc: req.body.desc || "Sin descripción"
   };
 
@@ -63,7 +66,7 @@ app.put("/producto/:id", (req, res) => {
   productos[indice] = {
     ...productos[indice],
     nombre: req.body.nombre || productos[indice].nombre,
-    precio: req.body.precio !== undefined ? req.body.precio : productos[indice].precio,
+    categoria: req.body.categoria || productos[indice].categoria,
     desc: req.body.desc || productos[indice].desc
   };
 
