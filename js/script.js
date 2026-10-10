@@ -63,7 +63,6 @@ function cerrarZoom() {
 
 // Eventos de apertura y cierre //
 window.onload = function () {
-  // 1. Abrir al hacer clic en las imágenes de la galería y del proceso
   var imagenesGaleria = document.querySelectorAll('.contenedor-img img, .contenedor-img-proceso img');
   for (var i = 0; i < imagenesGaleria.length; i++) {
     imagenesGaleria[i].onclick = function (e) {
@@ -72,7 +71,6 @@ window.onload = function () {
     };
   }
 
-  // 2. Botón de cerrar (la X)
   var btnCerrar = document.getElementById('btnCerrarZoom') || document.querySelector('.cerrar-zoom');
   if (btnCerrar) {
     btnCerrar.onclick = function (e) {
@@ -81,18 +79,15 @@ window.onload = function () {
     };
   }
 
-  // 3. Clic afuera de la foto (en el fondo oscuro) para cerrar
   var modal = document.getElementById('modalZoom');
   if (modal) {
     modal.onclick = function (e) {
-      // Si se hace clic en el fondo oscuro y no dentro del cuadro de la imagen
       if (e.target === modal) {
         cerrarZoom();
       }
     };
   }
 
-  // 4. Cerrar con la tecla Escape
   document.onkeydown = function (e) {
     if (e.key === "Escape" || e.keyCode === 27) {
       cerrarZoom();
